@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: 'Pet Realm',
       theme: new ThemeData(
-        primarySwatch: Colors.yellow,
+        primarySwatch: Colors.teal,
       ),
       home: new MyHomePage(),
     );
@@ -32,41 +32,6 @@ class MyHomePage extends StatelessWidget {
     }
 }
 
-// class MyHomePage extends StatelessWidget {
-
-//   @override
-//     Widget build(BuildContext context) {
-//      
-//       return Scaffold(
-//         appBar: AppBar(
-//           title: Text("circle"),
-//         ),
-//         body: Center(
-//           child: Container(
-                  
-//                   height: 80.0,
-//                   width: 80.0,
-//                   margin: EdgeInsets.only(
-//                     left: 5.0,
-//                     right: 5.0
-//                   ),
-//                   decoration: BoxDecoration(
-//                     borderRadius: BorderRadius.circular(75.0),
-//                     border: Border.all(
-//                       width: 2.0,
-//                       style:BorderStyle.solid ,
-//                       color: Color.fromARGB(255, 0 , 0, 0)
-//                     ),
-//                     image: DecorationImage(
-//                       fit: BoxFit.cover,
-//                       image: NetworkImage("https://cdn.dribbble.com/users/1368/screenshots/1785863/icons_2x.png")
-//                     )
-//                   )
-//                 ) 
-//         ) ,
-//       );
-//     }
-// }
 
 class CircleImages extends StatefulWidget{
   
@@ -81,12 +46,11 @@ class CircleWidgets extends State<CircleImages>{
   @override
     Widget build(BuildContext context) {
       List<Widget> widgets = [];
-      //for(var x = 0 ; x < 10 ; x++){
         widgets.add(Container(
                   height: 75.0,
                   width: 125.0,
                   margin: EdgeInsets.all(
-                    20.0
+                    15.0
                   ),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(75.0),
@@ -102,7 +66,10 @@ class CircleWidgets extends State<CircleImages>{
                       fit: BoxFit.cover,
                       image: new AssetImage("assets/dog2.jpg"),
                     )
-                  )
+                    
+                  ),
+                alignment: Alignment(0.0,1.0),
+                child: Text(' Dogs ' ),
                 ) 
             );
       widgets.add(Container(
